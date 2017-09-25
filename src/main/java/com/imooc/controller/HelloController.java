@@ -1,5 +1,6 @@
-package com.imooc;
+package com.imooc.controller;
 
+import com.imooc.properties.GirlProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -7,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/hello")
 public class HelloController {
     @Autowired
-    private  GirlProperties girlProperties;
+    private GirlProperties girlProperties;
 
     @RequestMapping(value = "/{id}/say",method = RequestMethod.GET)
     public String say(@PathVariable("id")Integer id){
